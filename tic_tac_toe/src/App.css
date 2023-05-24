@@ -6,3 +6,10 @@
 .board-container{
 margin: 20px;
 }
+h1{
+  text-align: center;
+}
+button{
+  background-color: lightgreen;
+  size: 45rem;
+}

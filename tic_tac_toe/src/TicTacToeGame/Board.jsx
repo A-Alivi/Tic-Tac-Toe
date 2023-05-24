@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Square from "./Square";
+import App from "../App";
+
 const Board = () =>{
     const [state, setState] = useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = useState(true);
@@ -44,10 +46,10 @@ const Board = () =>{
 
         <div className = "board-container">
             {isWinner ? (
-                <h1 id="final-message">{isWinner} won the game <button onClick={handleReset}>Play Again</button></h1>
+                <h1>Congratulation! <br /> {isWinner} won the game. <br /> <button onClick={handleReset}>Play Again</button></h1>
             ):(
             <>
-            <h4>Player {isXTurn ? "X" : "O"} its your turn. </h4>
+            <h1>Player {isXTurn ? "X" : "O"}, its your turn. </h1>
             <div className="board-row">
             <Square onClick={() => handleClick(0)} value ={state[0]}/>
             <Square onClick={() => handleClick(1)} value ={state[1]}/>
